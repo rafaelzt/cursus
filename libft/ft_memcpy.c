@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:04:05 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/14 17:08:28 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/15 11:06:26 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, unsigned int n)
 {
-	unsigned int position;
+	unsigned int	position;
 
 	position = 0;
 	while (position < n)
