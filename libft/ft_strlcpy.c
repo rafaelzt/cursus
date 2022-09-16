@@ -6,27 +6,27 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:44:16 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/15 11:33:22 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/16 13:08:47 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 
 	i = 0;
-	if (!src || !dest)
+	if (!src || !dst)
 		return (0);
-	if (size != 0)
+	if (dstsize != 0)
 	{
-		while (i < (size - 1))
+		while (i < (dstsize - 1))
 		{
-			dest[i] = src[i];
+			dst[i] = src[i];
 			i++;
 		}
-		dest[i] = '\0';
+		dst[i] = '\0';
 	}
 	i = 0;
 	while (src[i] != '\0')

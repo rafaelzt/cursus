@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:07:59 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/15 11:47:53 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/16 17:29:56 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, unsigned int len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*d;
 	unsigned char	*s;
@@ -21,6 +22,9 @@ void	*ft_memmove(void *dst, const void *src, unsigned int len)
 
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
+	printf("\nsrc_val : %c\nsrc : %p\n", *s, s);
+	printf("\ndest_val: %c\ndest: %p\n", *d, d);
+	
 	if (d < s)
 		while (len--)
 			*d++ = *s++;
