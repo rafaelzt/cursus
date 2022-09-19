@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:09:59 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/16 17:49:43 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/19 18:21:28 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@ char	*ft_strchr(const char *s, int c)
 	char	*aux;
 
 	aux = (char *)s;
-	while (aux != '\0')
+	while (*aux != c)
 	{
-		if (*aux == c)
-			return (aux);
+		if (*aux == '\0')
+			return (0);
 		aux++;
 	}
-	return (0);
+	return (aux);
 }

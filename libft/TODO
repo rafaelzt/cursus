@@ -1,9 +1,10 @@
 [ ] ft_calloc
-[ ] ft_memmove
 [ ] ft_strdup
 [ ] ft_strnstr
 [ ] ft_atoi
 
+[ ] ft_strchr
+[ ] ft_strrstr
 [ ] ft_strlcpy
 [ ] ft_strlcat
 

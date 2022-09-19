@@ -6,13 +6,14 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:17:52 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/16 18:02:20 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/19 16:16:10 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBC_H
 # define LIBC_H
 #include <stdlib.h>
+#include <limits.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -33,5 +34,6 @@ char	*ft_strrchr(const char *s, int c);
 int 	ft_strncmp(char *s1, char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int 	ft_memcmp(const void *s1_void, const void *s2_void, size_t n);
+int		ft_atoi(const char *num);
 
 #endif
