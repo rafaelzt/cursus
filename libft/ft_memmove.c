@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:07:59 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/19 14:20:11 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/20 12:23:32 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
+	if (dst == 0 && src == 0)
+		return (0);
 	if (d < s)
 		while (len--)
 			*d++ = *s++;

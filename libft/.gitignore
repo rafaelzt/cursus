@@ -3,3 +3,4 @@ libftTester
 libft-war-machine
 libft-unit-test
 a.out
+*.o

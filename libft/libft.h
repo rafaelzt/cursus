@@ -6,13 +6,16 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:17:52 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/19 16:16:10 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/20 11:55:15 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBC_H
 # define LIBC_H
+
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 #include <limits.h>
 
 int		ft_isalpha(int c);
