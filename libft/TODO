@@ -1,10 +1,27 @@
-[ ] ft_calloc
-[ ] ft_strdup
-[ ] ft_strnstr
-[ ] ft_atoi
+UnitTest	WarMachine		Tester
+[  ] 	    [  ]		   [  ] 		ft_atoi.c
+[  ] 	    [  ]		   [  ] 		ft_strchr.c
+[  ] 	    [  ]		   [  ] 		ft_strlcat.c
+[  ] 	    [  ]		   [  ] 		ft_strlcpy.c
+[  ] 	    [  ]		   [  ] 		ft_strnstr.c
+[  ] 	    [  ]		   [  ] 		ft_strrchr.c
 
-[ ] ft_strchr
-[ ] ft_strrstr
-[ ] ft_strlcpy
-[ ] ft_strlcat
+[  ] 	    [  ]		   [  ] 		ft_calloc.c
+[  ] 	    [  ]		   [  ] 		ft_strdup.c
 
+----
+[OK] 	    [OK]		   [OK] 		ft_tolower.c
+[OK] 	    [OK]		   [OK] 		ft_toupper.c
+[OK] 	    [OK]		   [OK] 		ft_bzero.c
+[OK] 	    [OK]		   [OK] 		ft_isalnum.c
+[OK] 	    [OK]		   [OK] 		ft_isalpha.c
+[OK] 	    [OK]		   [OK] 		ft_isascii.c
+[OK] 	    [OK]		   [OK] 		ft_isdigit.c
+[OK] 	    [OK]		   [OK] 		ft_isprint.c
+[OK] 	    [OK]		   [OK] 		ft_memchr.c
+[OK] 	    [OK]		   [OK] 		ft_memcpy.c
+[OK] 	    [OK]		   [OK] 		ft_memset.c
+[OK] 	    [OK]		   [OK] 		ft_memmove.c
+[OK] 	    [OK]		   [OK] 		ft_strlen.c
+[OK] 	    [OK]		   [OK] 		ft_memcmp.c
+[OK] 	    [OK]		   [OK] 		ft_strncmp.c
