@@ -3,42 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:25 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/19 17:32:03 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/21 13:20:23 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *s)
 {
-	int	neg;
-	int value;
-	char *num;
+	int		i;
+	int		j;
+	int		ans;
+	char	*input;
 
-	neg = 0;
-	value = 0;
-	num = (char *)str;
-	// check whitespaces and ignore it
-	while (*num == ' ')
+	i = 0;
+	j = 1;
+	ans = 0;
+	input = (char *)s;
+	while (IS_WHITESPACE(*input))
+		input++;
+	if (*input == '-' && ft_isdigit(*(input + 1)))
 	{
-		num++;
+		j = -1;
+		input++;
 	}
-	// sign
-		
-	// valid input
-	while (*num >= '0' && *num >= '9')
+	if (*input == '+' && ft_isdigit(*(input + 1)))
+		input++;
+	while (ft_isdigit(*input))
 	{
-		if (value > INT_MAX / 10 || (value == INT_MAX / 10 && (*num - '0') > 7))
-		{
-			if (neg == 0)
-				return (INT_MAX);
-			else
-				return (INT_MIN);
-		}
-		value = 10 * value + *num++ - '0';
+		ans = ans * 10 + (*input - '0');
+		input++;
 	}
-	return (value);
+	return (j * ans);
 }

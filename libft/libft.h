@@ -6,12 +6,15 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:17:52 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/21 12:53:56 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/21 13:20:08 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBC_H
 # define LIBC_H
+# define TRIM(c) (c == ' ' || c == '\n' || c == '\t')
+# define ADDTL_WHITESPACE(c) (c == '\v' || c == '\r' || c == '\f')
+# define IS_WHITESPACE(c) (TRIM(c) || ADDTL_WHITESPACE(c))
 
 #include <stdlib.h>
 
