@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	while (len > 0)
 	{
-		ptr[]
+		*ptr
 		len--;
 	}
 	return (0);
