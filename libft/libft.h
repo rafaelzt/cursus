@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:17:52 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/20 13:25:43 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/21 12:25:39 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ int 	ft_strncmp(char *s1, char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int 	ft_memcmp(const void *s1_void, const void *s2_void, size_t n);
 int		ft_atoi(const char *num);
+void	*ft_calloc(size_t count, size_t size);
 
 #endif

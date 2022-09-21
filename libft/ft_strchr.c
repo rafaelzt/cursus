@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:09:59 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/19 18:21:28 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/21 12:18:19 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strchr(const char *s, int c)
 	char	*aux;
 
 	aux = (char *)s;
-	while (*aux != c)
+	while (*aux != (unsigned char)c)
 	{
 		if (*aux == '\0')
 			return (0);
