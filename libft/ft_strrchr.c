@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:10:12 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/21 11:26:40 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/21 11:45:18 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-
 
 // int	main(void)
 // {

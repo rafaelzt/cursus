@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   _ft_strlcpy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:44:16 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/21 11:54:30 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/21 12:15:26 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src_const, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	pos;
-	char	*src;
+	unsigned int	i;
 
-	pos = 0;
-	src = (char *)src_const;
-	if (size > 0)
+	i = 0;
+	if (!src || !dst)
+		return (0);
+	if (dstsize != 0)
 	{
-		while (src[pos] && pos < (size - 1))
+		while (i < (dstsize - 1))
 		{
-			dst[pos] = src[pos];
-			pos++;
+			dst[i] = src[i];
+			i++;
 		}
-		dst[pos] = 0;
+		dst[i] = '\0';
 	}
-	while (src_const[pos])
-		pos++;
-	return (pos);
+	i = 0;
+	while (src[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }

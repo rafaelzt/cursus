@@ -2,13 +2,12 @@ UnitTest	WarMachine		Tester
 [  ] 	    [  ]		   [  ] 		ft_atoi.c
 [  ] 	    [  ]		   [  ] 		ft_strchr.c
 [  ] 	    [  ]		   [  ] 		ft_strlcat.c
-[  ] 	    [  ]		   [  ] 		ft_strlcpy.c
 [  ] 	    [  ]		   [  ] 		ft_strnstr.c
-
 [  ] 	    [  ]		   [  ] 		ft_calloc.c
 [  ] 	    [  ]		   [  ] 		ft_strdup.c
 
 ----
+[OK] 	    [OK]		   [OK] 		ft_strlcpy.c -- 
 [OK] 	    [OK]		   [OK] 		ft_strrchr.c
 [OK] 	    [OK]		   [OK] 		ft_tolower.c
 [OK] 	    [OK]		   [OK] 		ft_toupper.c
