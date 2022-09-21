@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:10:12 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/19 14:22:01 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/21 11:26:40 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,24 @@ char	*ft_strrchr(const char *s, int c)
 
 	length = ft_strlen(s);
 	aux = (char *)s + length;
-	while (aux > 0)
+	while (length >= 0)
 	{
-		if (*aux == c)
+		if (*aux == (unsigned char)c)
 		{
 			return (aux);
 		}	
 		aux--;
+		length--;
 	}
 	return (0);
 }
+
+
+// int	main(void)
+// {
+// 	char str[10] = "tripouille";
+
+// 	printf("strrchr   : %s\n", strrchr(str, 't' + 256));
+// 	printf("ft_strrchr: %s\n", ft_strrchr(str, 't' + 256));
+
+// }

@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:17:52 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/20 11:55:15 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/20 13:25:43 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 # define LIBC_H
 
 #include <stdlib.h>
+
 #include <stdio.h>
-#include <string.h>
+#include <strings.h>
 #include <limits.h>
+
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

@@ -4,12 +4,12 @@ UnitTest	WarMachine		Tester
 [  ] 	    [  ]		   [  ] 		ft_strlcat.c
 [  ] 	    [  ]		   [  ] 		ft_strlcpy.c
 [  ] 	    [  ]		   [  ] 		ft_strnstr.c
-[  ] 	    [  ]		   [  ] 		ft_strrchr.c
 
 [  ] 	    [  ]		   [  ] 		ft_calloc.c
 [  ] 	    [  ]		   [  ] 		ft_strdup.c
 
 ----
+[OK] 	    [OK]		   [OK] 		ft_strrchr.c
 [OK] 	    [OK]		   [OK] 		ft_tolower.c
 [OK] 	    [OK]		   [OK] 		ft_toupper.c
 [OK] 	    [OK]		   [OK] 		ft_bzero.c
