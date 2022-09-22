@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:25 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/22 13:52:46 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/22 18:01:53 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int	ft_atoi(const char *s)
 		ans = ans * 10 + (*input - '0');
 		input++;
 	}
-	if (((j * ans)) > 2147483648)
+	if (((j * ans)) > 2147483650)
 		return (1);
-	else if (((j * ans)) < -2147483649)
+	else if (((j * ans)) < -2147483650)
 		return (-1);
 	else
 		return ((j * ans));

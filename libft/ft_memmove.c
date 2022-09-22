@@ -6,11 +6,10 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:07:59 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/20 12:23:32 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/22 18:05:07 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
