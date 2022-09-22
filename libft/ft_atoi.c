@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:25 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/21 17:00:08 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/22 11:24:59 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *s)
 {
-	long	i;
-	long	j;
+	int	i;
+	int	j;
 	long	ans;
 	char	*input;
 
@@ -37,5 +37,20 @@ int	ft_atoi(const char *s)
 		ans = ans * 10 + (*input - '0');
 		input++;
 	}
-	return ((j * ans));
+	if (((j * ans)) > 2147483648)
+		return (1);
+	else if (((j * ans)) < -2147483649)
+		return (-1);
+	else
+		return ((j * ans));
+}
+
+int	main(void)
+{
+	printf("atoi   : %d\n",atoi("2147483648"));
+	printf("ft_atoi: %d\n",ft_atoi("2147483648"));
+
+	printf("atoi   : %d\n",atoi("-2147483649"));
+	printf("ft_atoi: %d\n",ft_atoi("-2147483649"));
+	return (0);
 }

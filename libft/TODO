@@ -1,7 +1,22 @@
 UnitTest	WarMachine		Tester
-[  ] 	    [OK]		   [OK] 		ft_strlcat.c
-[  ] 	    [OK]		   [  ] 		ft_strnstr.c
-[  ] 	    [OK]		   [OK] 		ft_atoi.c --
+······················ Parte 2 ······················
+[  ] 	    [  ]		   [  ] 		ft_substr
+[OK] 	    [OK]		   [OK] 		ft_strjoin
+[  ] 	    [  ]		   [  ] 		
+[  ] 	    [  ]		   [  ] 		
+[  ] 	    [  ]		   [  ] 		
+[  ] 	    [  ]		   [  ] 		
+[  ] 	    [  ]		   [  ] 		
+[  ] 	    [  ]		   [  ] 		
+[  ] 	    [  ]		   [  ] 		
+[  ] 	    [  ]		   [  ] 		
+[  ] 	    [  ]		   [  ] 		
+[  ] 	    [  ]		   [  ] 		
+
+······················ Parte 1 ······················
+[  ] 	    [OK]		   [OK] 		ft_strlcat.c (https://github.com/unofficial-opensource-apple/Libc/blob/master/string/strlcat.c)
+[  ] 	    [OK]		   [  ] 		ft_strnstr.c -- (https://github.com/embeddedartistry/libc/blob/master/src/string/strnstr.c)
+[  ] 	    [OK]		   [OK] 		ft_atoi.c -- (https://android.googlesource.com/kernel/lk/+/upstream-master/lib/libc/atoi.c)
 
 ----
 [OK] 	    [OK]		   [OK] 		ft_strdup.c

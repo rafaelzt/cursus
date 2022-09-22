@@ -9,7 +9,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	aux = (char *)s;
 	index = 0;
-	ptr = malloc(sizeof(*s) * len);
+	ptr = malloc(sizeof(*s) * (len + 1));
 	if (ptr == 0)
 		return (ptr);
 	while (index != start)
@@ -17,9 +17,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	while (len > 0)
 	{
-		*ptr
+		*ptr = aux[index];
+		index++;
+		ptr++;
 		len--;
 	}
-	return (0);
-
+	*ptr = '\0';
+	return (ptr);
 }
