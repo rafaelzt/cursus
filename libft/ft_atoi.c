@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:25 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/22 18:01:53 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/22 19:42:06 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 int	ft_atoi(const char *s)
 {
-	int	i;
 	int	j;
 	long	ans;
 	char	*input;
 
-	i = 0;
 	j = 1;
 	ans = 0;
 	input = (char *)s;

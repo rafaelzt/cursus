@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:17 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/22 18:06:04 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/22 19:42:53 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	aux;
-	char	*haystack_;
 	char	*needle_;
 
 	aux = 0;
-	haystack_ = (char *)haystack;
 	needle_ = (char *)needle;
 	if (!haystack)
 		return (0);
