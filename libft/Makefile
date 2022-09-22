@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+         #
+#    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/09/22 18:26:50 by rzamolo-          #+#    #+#              #
-#    Updated: 2022/09/22 18:32:26 by rzamolo-         ###   ########.fr        #
+#    Created: 2022/09/22 21:46:19 by rzamolo-          #+#    #+#              #
+#    Updated: 2022/09/22 22:02:33 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,10 @@ CFILES = 	ft_atoi.c \
 			ft_toupper.c \
 			ft_substr.c \
 			ft_strjoin.c \
-			ft_strtrim.c 
+			ft_strtrim.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c \
+			ft_putendl_fd.c
 HDRS = libft.h
 OBJS = ${CFILES:.c=.o}
 LIB = libft.a
