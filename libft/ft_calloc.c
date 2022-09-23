@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:40 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/22 19:42:31 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/23 11:10:02 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,9 @@ void	*ft_calloc(size_t count, size_t size)
 	int		length;
 
 	length = size * count;
-	if (!count || !size || length / size != count)
-		return (0);
 	ptr = malloc(length);
-	if (ptr == 0)
-		return (ptr);
+	if (!ptr || (length / size != count))
+		return (0);
 	ft_bzero(ptr, length);
 	return (ptr);
 }

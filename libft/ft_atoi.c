@@ -6,15 +6,18 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:25 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/22 19:42:06 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/23 10:55:54 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#define TRIM(c) (c == ' ' || c == '\n' || c == '\t')
+#define ADDTL_WHITESPACE(c) (c == '\v' || c == '\r' || c == '\f')
+#define IS_WHITESPACE(c) (TRIM(c) || ADDTL_WHITESPACE(c))
 
 int	ft_atoi(const char *s)
 {
-	int	j;
+	int		j;
 	long	ans;
 	char	*input;
 
@@ -35,10 +38,11 @@ int	ft_atoi(const char *s)
 		ans = ans * 10 + (*input - '0');
 		input++;
 	}
-	if (((j * ans)) > 2147483650)
-		return (1);
-	else if (((j * ans)) < -2147483650)
-		return (-1);
-	else
-		return ((j * ans));
+	return ((j * ans));
 }
+
+	// if (((j * ans)) > 2147483650)
+	// 	return (1);
+	// else if (((j * ans)) < -2147483650)
+	// 	return (-1);
+	// else

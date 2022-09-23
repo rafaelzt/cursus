@@ -3,27 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:17:52 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/22 22:01:27 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/23 10:57:47 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBC_H
-# define LIBC_H
-# define TRIM(c) (c == ' ' || c == '\n' || c == '\t')
-# define ADDTL_WHITESPACE(c) (c == '\v' || c == '\r' || c == '\f')
-# define IS_WHITESPACE(c) (TRIM(c) || ADDTL_WHITESPACE(c))
+#ifndef LIBFT_H
+# define LIBFT_H
 
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 // remove
-#include <stdio.h>
-#include <strings.h>
-
-
+# include <stdio.h>
+# include <strings.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -39,11 +34,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-char    *ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-int 	ft_strncmp(char *s1, char *s2, size_t n);
+int		ft_strncmp(char *s1, char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
-int 	ft_memcmp(const void *s1_void, const void *s2_void, size_t n);
+int		ft_memcmp(const void *s1_void, const void *s2_void, size_t n);
 int		ft_atoi(const char *num);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
