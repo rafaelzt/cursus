@@ -1,15 +1,15 @@
 UnitTest	WarMachine		Tester
 ······················ Parte 2 ······················
 [  ] 	    [  ]		   [  ] 		ft_substr
-[OK] 	    [OK]		   [OK] 		ft_strjoin
-[  ] 	    [  ]		   [  ] 		
-[  ] 	    [  ]		   [  ] 		
-[  ] 	    [  ]		   [  ] 		
-[  ] 	    [  ]		   [  ] 		
-[  ] 	    [  ]		   [  ] 		
-[  ] 	    [  ]		   [  ] 		
-[  ] 	    [  ]		   [  ] 		
-[  ] 	    [  ]		   [  ] 		
+[  ] 	    [  ]		   [  ] 		ft_strjoin
+[  ] 	    [  ]		   [  ] 		ft_strtrim
+[  ] 	    [  ]		   [  ] 		ft_split
+[  ] 	    [  ]		   [  ] 		ft_itoa
+[  ] 	    [  ]		   [  ] 		ft_strmapi
+[  ] 	    [  ]		   [  ] 		ft_striteri
+[OK] 	    [OK]		   [OK] 		ft_putchar_fd
+[OK] 	    [OK]		   [OK] 		ft_putstr_fd
+[OK] 	    [OK]		   [OK] 		ft_putendl_fd
 [  ] 	    [  ]		   [  ] 		
 [  ] 	    [  ]		   [  ] 		
 
