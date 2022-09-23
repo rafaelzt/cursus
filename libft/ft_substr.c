@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 12:41:31 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/23 17:00:30 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/23 18:52:31 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!str)
 		return (0);
 	else if ((start >= ft_strlen(s)))
-	{
 		return (str);
-	}
 	s += start;
 	while (len > 0)
 	{
