@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 12:41:31 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/23 16:43:57 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/23 17:00:30 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	aux;
 
 	aux = len;
+	if (!s)
+		return (0);
 	str = ft_calloc(sizeof(*s), (len + 1));
 	if (!str)
 		return (0);
