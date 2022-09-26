@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 23:42:32 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/24 23:43:06 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/26 11:10:11 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && trimornot(set, s1[end - 1]) == 1)
 		end--;
 	len = end - start;
-	str = (char *)malloc((len + 1) * sizeof(char));
+	str = ft_calloc(sizeof(*s1), (len + 1));
 	if (!str)
 		return (0);
 	while (i < len)
