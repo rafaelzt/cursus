@@ -3,60 +3,79 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 10:47:16 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/26 17:14:42 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/26 22:48:53 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	size_t	getsize(int n)
+static int	ft_count_digits(int n)
 {
-	size_t	size;
+	int	i;
 
-	size = 0;
-	while (n > 0)
+	i = 0;
+	if (n < 0)
 	{
-		size++;
-		n /= 10;
+		n = -n;
+		i++;
 	}
-	return (size);
+	while (n)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i);
+}
+
+static void	ft_strrev(char *str)
+{
+	char	temp;
+	int		start;
+	int		end;
+
+	start = 0;
+	end = ft_strlen(str) - 1;
+	if (str[start] == '-')
+		start++;
+	while (str[start] && start < end)
+	{
+		temp = str[start];
+		str[start] = str[end];
+		str[end] = temp;
+		start++;
+		end--;
+	}
 }
 
 char	*ft_itoa(int n)
 {
-	size_t		sign;
-	size_t		size;
-	long long	aux;
-	char		*ptr;
+	char	*res;
+	int		i;
 
-	sign = 0;
-	aux = n;
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
+	res = (char *)malloc(sizeof(char) * (ft_count_digits(n) + 1));
+	if (!res)
+		return (NULL);
+	i = 0;
 	if (n < 0)
 	{
-		n *= -1;
-		size = getsize(n) + 2;
-		sign = 1;
+		n = -n;
+		res[i++] = '-';
 	}
-	else
-		size = getsize(n) + 1;
-	ptr = ft_calloc(size, sizeof(char));
-	if (!ptr)
-		return (0);
-	ptr += size;
-	while (n > 0)
+	while (n)
 	{
-		*--ptr = (n % 10) + '0';
-		n /= 10;
+		res[i++] = (n % 10) + '0';
+		n = n / 10;
 	}
-	if (aux < 0)
-	{
-		*--ptr = '-';
-		return (ptr);
-	}
-	return (ptr);
+	res[i] = '\0';
+	ft_strrev(res);
+	return (res);
 }
 
 // int	main(void)

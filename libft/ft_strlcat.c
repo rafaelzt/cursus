@@ -3,30 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:53:56 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/22 18:05:34 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/26 22:53:41 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static size_t	ft_strdestlen(const char *s, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] && i < n)
+		i++;
+	return (i);
+}
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	position;
-	size_t	len_dst;
+	size_t	srclen;
+	size_t	dstlen;
 
-	position = 0;
-	len_dst = ft_strlen(dst);
-	if (dstsize <= len_dst)
-		return (dstsize + ft_strlen(src));
-	while (src[position] != '\0' && len_dst + 1 < dstsize)
-	{
-		dst[len_dst] = src[position];
-		len_dst++;
-		position++;
-	}
-	dst[len_dst] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[position]));
+	srclen = ft_strlen(src);
+	dstlen = ft_strdestlen(dst, dstsize);
+	if (dstlen == dstsize)
+		return (dstlen + srclen);
+	ft_strlcpy(&dst[dstlen], src, dstsize - dstlen);
+	return (dstlen + srclen);
 }
