@@ -6,41 +6,68 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 10:47:16 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/26 13:06:03 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/26 17:14:42 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static	size_t	getsize(int n)
 {
-	int		sign;
-	int		size;
-	char	*ptr;
+	size_t	size;
 
-	sign = 0;
 	size = 0;
-	if (n < 0)
-	{
-		sign = 1;
-		n *= -1;
-	}
 	while (n > 0)
 	{
 		size++;
 		n /= 10;
 	}
+	return (size);
+}
+
+char	*ft_itoa(int n)
+{
+	size_t		sign;
+	size_t		size;
+	long long	aux;
+	char		*ptr;
+
+	sign = 0;
+	aux = n;
+	if (n < 0)
+	{
+		n *= -1;
+		size = getsize(n) + 2;
+		sign = 1;
+	}
+	else
+		size = getsize(n) + 1;
 	ptr = ft_calloc(size, sizeof(char));
 	if (!ptr)
 		return (0);
-	return (0);
-	
+	ptr += size;
+	while (n > 0)
+	{
+		*--ptr = (n % 10) + '0';
+		n /= 10;
+	}
+	if (aux < 0)
+	{
+		*--ptr = '-';
+		return (ptr);
+	}
+	return (ptr);
 }
 
-int	main(void)
-{
-	int	n = 123;
+// int	main(void)
+// {
+// 	int	n = 147483648;
 
-	printf("valor em char: %s\n", ft_itoa(n));
-	printf("valor em int : %d\n", (n));
-}
+// 	printf("ft_itoa valor em char: %s\n", ft_itoa(n));
+// 	printf("valor em int : %d\n", (n));
+
+// 	n = -53700;
+
+// 	printf("ft_itoa valor em char: %s\n", ft_itoa(n));
+// 	printf("valor em int : %d\n", (n));
+// }
