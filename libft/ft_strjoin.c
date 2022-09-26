@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:53:23 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/23 18:50:53 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/24 23:39:57 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,26 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	size;
-	char	*join;
+	char	*newstr;
+	size_t	s1s2;
+	size_t	i;
+	size_t	j;
 
-	size = ft_strlen(s1) + ft_strlen(s2) + 1;
-	join = (char *)ft_calloc(size, sizeof(*s1));
-	if (join == 0)
-		return (join);
-	while (*s1 != '\0')
-	{
-		*join = *s1;
-		join++;
-		s1++;
-	}
-	while (*s2 != '\0')
-	{
-		*join = *s2;
-		join++;
-		s2++;
-	}
-	join -= size;
-	return (join);
+	s1s2 = ft_strlen(s1) + ft_strlen(s2);
+	newstr = malloc(sizeof(char) * (s1s2 + 1));
+	if (!newstr)
+		return (0);
+	if (!s1 || !s2)
+		return (0);
+	i = -1;
+	j = 0;
+	if (s1 != NULL)
+		while (s1[++i] != '\0')
+			newstr[i] = s1[i];
+	while (s2[j] != '\0')
+		newstr[i++] = s2[j++];
+	newstr[s1s2] = '\0';
+	return (newstr);
 }
 
 // int	main(void)

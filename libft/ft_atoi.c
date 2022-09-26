@@ -3,42 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:25 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/23 10:55:54 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/24 23:38:01 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#define TRIM(c) (c == ' ' || c == '\n' || c == '\t')
-#define ADDTL_WHITESPACE(c) (c == '\v' || c == '\r' || c == '\f')
-#define IS_WHITESPACE(c) (TRIM(c) || ADDTL_WHITESPACE(c))
 
-int	ft_atoi(const char *s)
+int	ft_atoi(const char *str)
 {
-	int		j;
-	long	ans;
-	char	*input;
+	int		i;
+	long	num;
+	int		neg;
 
-	j = 1;
-	ans = 0;
-	input = (char *)s;
-	while (IS_WHITESPACE(*input))
-		input++;
-	if (*input == '-' && ft_isdigit(*(input + 1)))
+	num = 0;
+	neg = 1;
+	i = 0;
+	while ((str[i] <= 13 && str[i] >= 9) || str[i] == 32)
+		i++;
+	if (str[i] == '-')
+		neg *= -1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] != '\0' && (str[i] <= 57 && str[i] >= 48))
 	{
-		j = -1;
-		input++;
+		if (num * neg > 2147483647)
+			return (-1);
+		else if (num * neg < -2147483647)
+			return (0);
+		num = num * 10 + (str[i] - 48);
+		i++;
 	}
-	if (*input == '+' && ft_isdigit(*(input + 1)))
-		input++;
-	while (ft_isdigit(*input))
-	{
-		ans = ans * 10 + (*input - '0');
-		input++;
-	}
-	return ((j * ans));
+	return ((int)num * neg);
 }
 
 	// if (((j * ans)) > 2147483650)
