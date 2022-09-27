@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 10:47:16 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/26 18:43:53 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/27 17:17:20 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ static size_t getsize(int n)
 
 char *ft_itoa(int n)
 {
-	size_t sign;
-	size_t size;
-	long long aux;
-	char *ptr;
+	size_t		sign;
+	size_t		size;
+	long long	aux;
+	char		*ptr;
 
 	sign = 0;
 	aux = n;
@@ -59,15 +59,15 @@ char *ft_itoa(int n)
 	return (ptr);
 }
 
-int main(void)
-{
-	int n = 147483648;
+// int main(void)
+// {
+// 	int n = 147483648;
 
-	printf("ft_itoa valor em char: %s\n", ft_itoa(n));
-	printf("valor em int : %d\n", (n));
+// 	printf("ft_itoa valor em char: %s\n", ft_itoa(n));
+// 	printf("valor em int : %d\n", (n));
 
-	n = -53700;
+// 	n = -53700;
 
-	printf("ft_itoa valor em char: %s\n", ft_itoa(n));
-	printf("valor em int : %d\n", (n));
-}
+// 	printf("ft_itoa valor em char: %s\n", ft_itoa(n));
+// 	printf("valor em int : %d\n", (n));
+// }

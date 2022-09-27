@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:53:56 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/27 16:37:32 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/27 17:05:24 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	else
 		return (src_length + dest_length);
 }
-
-// int	main(void)
-// {
-// 	char	b[15] = "nyan !";
-
-// 	printf("ft_strlcat: %lu\n", ft_strlcat(NULL, b, 0));
-// 	return (0);
-// }
