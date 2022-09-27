@@ -1,41 +1,10 @@
 UnitTest	WarMachine		Tester
 ······················ Parte 2 ······················
-[  ] 	    [  ]		   [  ] 		ft_substr
-[  ] 	    [  ]		   [  ] 		ft_strjoin
-[  ] 	    [  ]		   [  ] 		ft_strtrim
 [  ] 	    [  ]		   [  ] 		ft_split
 [  ] 	    [  ]		   [  ] 		ft_itoa
-[  ] 	    [  ]		   [  ] 		ft_strmapi
-[  ] 	    [  ]		   [  ] 		ft_striteri
-[OK] 	    [OK]		   [OK] 		ft_putchar_fd
-[OK] 	    [OK]		   [OK] 		ft_putstr_fd
-[OK] 	    [OK]		   [OK] 		ft_putendl_fd
-[  ] 	    [  ]		   [  ] 		
-[  ] 	    [  ]		   [  ] 		
 
 ······················ Parte 1 ······················
 [  ] 	    [OK]		   [OK] 		ft_strlcat.c (https://github.com/unofficial-opensource-apple/Libc/blob/master/string/strlcat.c)
 [  ] 	    [OK]		   [  ] 		ft_strnstr.c -- (https://github.com/embeddedartistry/libc/blob/master/src/string/strnstr.c)
 [  ] 	    [OK]		   [OK] 		ft_atoi.c -- (https://android.googlesource.com/kernel/lk/+/upstream-master/lib/libc/atoi.c)
-
-----
-[OK] 	    [OK]		   [OK] 		ft_strdup.c
-[OK] 	    [OK]		   [OK] 		ft_calloc.c
 [OK] 	    [OK]		   [OK] 		ft_strlcpy.c -- 
-[OK] 	    [OK]		   [OK] 		ft_strchr.c
-[OK] 	    [OK]		   [OK] 		ft_strrchr.c
-[OK] 	    [OK]		   [OK] 		ft_tolower.c
-[OK] 	    [OK]		   [OK] 		ft_toupper.c
-[OK] 	    [OK]		   [OK] 		ft_bzero.c
-[OK] 	    [OK]		   [OK] 		ft_isalnum.c
-[OK] 	    [OK]		   [OK] 		ft_isalpha.c
-[OK] 	    [OK]		   [OK] 		ft_isascii.c
-[OK] 	    [OK]		   [OK] 		ft_isdigit.c
-[OK] 	    [OK]		   [OK] 		ft_isprint.c
-[OK] 	    [OK]		   [OK] 		ft_memchr.c
-[OK] 	    [OK]		   [OK] 		ft_memcpy.c
-[OK] 	    [OK]		   [OK] 		ft_memset.c
-[OK] 	    [OK]		   [OK] 		ft_memmove.c
-[OK] 	    [OK]		   [OK] 		ft_strlen.c
-[OK] 	    [OK]		   [OK] 		ft_memcmp.c
-[OK] 	    [OK]		   [OK] 		ft_strncmp.c
