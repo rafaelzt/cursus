@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:25 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/24 23:38:01 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/27 16:07:20 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 	{
 		if (num * neg > 2147483647)
 			return (-1);
-		else if (num * neg < -2147483647)
+		else if (num * neg < -2147483648)
 			return (0);
 		num = num * 10 + (str[i] - 48);
 		i++;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:17 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/24 23:41:25 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/27 16:24:04 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,35 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	size_t	aux;
+	char	*haystack_;
+	char	*needle_;
 
-	j = 0;
-	if (needle[0] == '\0')
+	aux = 0;
+	haystack_ = (char *)haystack;
+	needle_ = (char *)needle;
+	if (!haystack)
+		return (0);
+	if (!needle || ft_strlen(needle) == 0)
 		return ((char *)haystack);
-	while (haystack[j] != '\0' && j < len)
+	if (ft_strlen(needle) > len)
+		return (0);
+	while (aux < len)
 	{
-		i = 0;
-		while (needle[i] && haystack[j] && needle[i] == haystack[j])
+		if (ft_strncmp((char *)&haystack[aux], needle_, ft_strlen(needle)) == 0)
 		{
-			i++;
-			j++;
-			if (j > len)
+			if (aux + ft_strlen(needle) > len)
 				return (0);
+			return ((char *)&haystack[aux]);
 		}
-		if (needle[i] == '\0')
-			return ((char *)&haystack[j - i]);
-		j = j - i + 1;
+		aux++;
 	}
 	return (0);
 }
 
 // int	main(void)
 // {
-// 	char * empty = (char*)"";
-
-// 	printf("strnstr   : %s\n",strnstr(empty, "coucou", -1));
-// 	printf("ft_strnstr: %s\n",ft_strnstr(empty, "coucou", -1));
+// 	printf("strnstr   : %s\n", strnstr("MZIRIBMZIRIBMZE123", "MZIRIBMZE", strlen("MZIRIBMZE")));
+// 	printf("ft_strnstr: %s\n", ft_strnstr("MZIRIBMZIRIBMZE123", "MZIRIBMZE", strlen("MZIRIBMZE")));
 // 	return (0);
 // }
