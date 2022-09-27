@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:53:56 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/27 16:34:03 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/27 16:37:32 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	unsigned int	dest_length;
 	unsigned int	src_length;
 
-	if (!dest || !size)
+	if (!dest && !size)
 		return (0);
 	i = ft_strlen(dest);
 	j = 0;
