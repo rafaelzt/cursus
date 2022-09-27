@@ -3,71 +3,82 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 10:47:16 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/27 17:17:20 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/27 21:13:42 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t getsize(int n)
+static char	spe_putnbr(int nb)
 {
-	size_t size;
+	unsigned int	number;
 
-	size = 0;
-	while (n > 0)
+	number = nb;
+	if (number == 0)
+		return (0 + '0');
+	if (number > 0)
 	{
-		size++;
-		n /= 10;
+		spe_putnbr(number / 10);
+		number %= 10;
 	}
-	return (size);
+	return (number + '0');
 }
 
-char *ft_itoa(int n)
+static int	is_neg(int nb)
 {
-	size_t		sign;
-	size_t		size;
-	long long	aux;
-	char		*ptr;
+	if (nb < 0)
+		return (1);
+	return (0);
+}
 
-	sign = 0;
-	aux = n;
-	if (n < 0)
+static size_t	get_len(int n)
+{
+	size_t			len;
+	unsigned int	number;
+
+	len = 0;
+	if (is_neg(n))
 	{
-		n *= -1;
-		size = getsize(n) + 2;
-		sign = 1;
+		number = (unsigned int)-n;
+		len++;
 	}
 	else
-		size = getsize(n) + 1;
-	ptr = ft_calloc(size, sizeof(char));
-	if (!ptr)
-		return (0);
-	ptr += size;
-	while (n > 0)
+		number = (unsigned int)n;
+	while (number > 9)
 	{
-		*--ptr = (n % 10) + '0';
-		n /= 10;
+		number /= 10;
+		len++;
 	}
-	if (aux < 0)
-	{
-		*--ptr = '-';
-		return (ptr);
-	}
-	return (ptr);
+	len++;
+	return (len);
 }
 
-// int main(void)
-// {
-// 	int n = 147483648;
+char	*ft_itoa(int n)
+{
+	char			*result;
+	size_t			len;
+	unsigned int	num;
+	int				i;
 
-// 	printf("ft_itoa valor em char: %s\n", ft_itoa(n));
-// 	printf("valor em int : %d\n", (n));
-
-// 	n = -53700;
-
-// 	printf("ft_itoa valor em char: %s\n", ft_itoa(n));
-// 	printf("valor em int : %d\n", (n));
-// }
+	len = get_len(n);
+	result = malloc(sizeof(char) * (len + 1));
+	if (result == NULL)
+		return (NULL);
+	i = 0;
+	if (is_neg(n))
+		num = (unsigned int)-n;
+	else
+		num = (unsigned int)n;
+	while (i++ <= (int)len - 1)
+	{
+		result[(int)len - i] = spe_putnbr(num);
+		num /= 10;
+	}
+	if (is_neg(n))
+		result[0] = '-';
+	result[len] = '\0';
+	return (result);
+}
