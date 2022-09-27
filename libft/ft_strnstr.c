@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:17 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/27 16:51:39 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/27 17:48:43 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	aux;
 
-	aux = 0;
-	if (!haystack && !len)
-		return (0);
 	if (!ft_strlen(needle))
 		return ((char *)haystack);
-	while (aux < len)
+	if (!haystack && !len)
+		return (0);
+	aux = 0;
+	while (aux < len && haystack[aux] != 0)
 	{
 		if (ft_strncmp((char *)&haystack[aux], (char *)needle, \
 		ft_strlen(needle)) == 0)
@@ -34,3 +34,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
+
+// int	main(void)
+// {
+// 	printf("   strnstr: %s\n", strnstr("fake", NULL, 3));
+// 	printf("ft_strnstr: %s\n", ft_strnstr("fake", NULL, 3));
+// 	return (0);
+// }
