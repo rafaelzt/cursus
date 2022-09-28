@@ -6,9 +6,16 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:54:00 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/22 18:01:59 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 12:01:36 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+    int	isascii(int c);
+DESCRIPTION
+    The isascii() function tests for an ASCII character, which is any character 
+	between 0 and octal 0177 inclusive.
+*/
 
 int	ft_isascii(int c)
 {

@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 13:35:35 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/28 10:56:46 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 12:28:02 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,3 +73,13 @@ char	**ft_split(char const *s, char c)
 	split[j] = 0;
 	return (split);
 }
+
+// int	main(void)
+// {
+// 	char str[50] = "lorem,ipsum,dolor,,sit amet";
+
+// 	printf("%s\n", ft_split(str, ',')[0]);
+// 	printf("%s\n", ft_split(str, ',')[1]);
+// 	printf("%s\n", ft_split(str, ',')[2]);
+// 	printf("%s\n", ft_split(str, ',')[3]);
+// }
