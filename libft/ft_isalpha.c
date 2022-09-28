@@ -6,12 +6,13 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 14:44:40 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/28 11:56:54 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:38:23 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
     int isalpha(int c);
+	
 DESCRIPTION
     The isalpha() function tests for any character for which isupper(3) or 
 	islower(3) is true.  The value of the argument must be representable as an 
@@ -31,11 +32,11 @@ DESCRIPTION
     157 ``o''     160 ``p''     161 ``q''     162 ``r''     163 ``s''
     164 ``t''     165 ``u''     166 ``v''     167 ``w''     170 ``x''
 	171 ``y''     172 ``z''
+	
 RETURN VALUES
     The isalpha() function returns zero if the character tests false and returns 
 	non-zero if the character tests true.
 */
-
 int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))

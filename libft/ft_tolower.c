@@ -6,12 +6,13 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 16:07:24 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/28 13:30:06 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:43:01 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
     int	tolower(int c);
+	
 DESCRIPTION
     The tolower() function converts an upper-case letter to the corresponding 
 	lower-case letter.  The argument must be representable as an unsigned char 
@@ -26,7 +27,6 @@ RETURN VALUES
 	corresponding lower-case letter if there is one; otherwise, the argument is 
 	returned unchanged.
 */
-
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)

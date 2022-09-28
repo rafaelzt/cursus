@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:28:57 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/28 11:59:31 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:39:13 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 /*
 	int	isalnum(int c);
+	
 DESCRIPTION
     The isalnum() function tests for any character for which isalpha(3) or 
 	isdigit(3) is true.  The value of the argument must be representable as an 
@@ -33,11 +34,11 @@ DESCRIPTION
     157 ``o''     160 ``p''     161 ``q''     162 ``r''     163 ``s''
     164 ``t''     165 ``u''     166 ``v''     167 ``w''     170 ``x''
     171 ``y''     172 ``z''
+	
 RETURN VALUES
     The isalnum() function returns zero if the character tests false and returns 
 	non-zero if the character tests true.
 */
-
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))

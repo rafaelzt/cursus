@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:04 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/28 13:14:47 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:44:03 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 /*
     int	memcmp(const void *s1, const void *s2, size_t n);
+	
 DESCRIPTION
     The memcmp() function compares byte string s1 against byte string s2.  
 	Both strings are assumed to be n bytes long.
+	
 RETURN VALUES
     The memcmp() function returns zero if the two strings are identical, 
 	otherwise returns the difference between the first two differing bytes 
@@ -25,7 +27,6 @@ RETURN VALUES
     Zero-length strings are always identical.  This behavior is not required by 
 	C and portable code should only depend on the sign of the returned value.
 */
-
 int	ft_memcmp(const void *s1_void, const void *s2_void, size_t n)
 {
 	size_t			aux;

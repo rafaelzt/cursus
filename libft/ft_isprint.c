@@ -6,12 +6,13 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:04:11 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/28 12:03:14 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:38:13 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
     int	isprint(int c);
+	
 DESCRIPTION
     The isprint() function tests for any printing character, including space 
 	(' ').  The value of the argument must be representable as an unsigned char 
@@ -37,6 +38,7 @@ DESCRIPTION
     160 ``p''     161 ``q''     162 ``r''     163 ``s''     164 ``t''
     165 ``u''     166 ``v''     167 ``w''     170 ``x''     171 ``y''
     172 ``z''     173 ``{''     174 ``|''     175 ``}''     176 ``~''
+	
 RETURN VALUES
     The isprint() function returns zero if the character tests false and returns 
 	non-zero if the character tests true.

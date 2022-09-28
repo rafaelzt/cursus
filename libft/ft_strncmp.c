@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:10:24 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/28 13:25:21 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:43:29 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 /*
     int	strncmp(const char *s1, const char *s2, size_t n);
+	
 DESCRIPTION
     The strcmp() and strncmp() functions lexicographically compare the 
 	null-terminated strings s1 and s2.
@@ -29,7 +30,6 @@ RETURN VALUES
 	or less than the string s2.  The comparison is done using unsigned charac-
     ters, so that `\200' is greater than `\0'.
 */
-
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;

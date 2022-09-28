@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:44:16 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/28 12:22:53 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:41:06 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 /*
 size_t	strlcpy(char *restrict dst, const char *restrict src, size_t dstsize);
+
 DESCRIPTION
     The strlcpy() and strlcat() functions copy and concatenate strings with the 
 	same input parameters and output result as snprintf(3).  They are designed 
@@ -51,7 +52,6 @@ RETURN VALUES
     If the return value is >= dstsize, the output string has been truncated.  
 	It is the caller's responsibility to handle this.
 */
-
 size_t	ft_strlcpy(char *dst, const char *src_const, size_t size)
 {
 	size_t	pos;

@@ -6,12 +6,13 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:09:59 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/28 13:27:22 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:43:17 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
     char	*strchr(const char *s, int c);
+	
 DESCRIPTION
     The strchr() function locates the first occurrence of c (converted to a 
 	char) in the string pointed to by s.  The terminating null character is 
@@ -25,7 +26,6 @@ RETURN VALUES
     The functions strchr() and strrchr() return a pointer to the located 
 	character, or NULL if the character does not appear in the string.
 */
-
 char	*ft_strchr(const char *s, int c)
 {
 	char	*aux;
