@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 21:46:19 by rzamolo-          #+#    #+#              #
-#    Updated: 2022/09/26 17:40:00 by rzamolo-         ###   ########.fr        #
+#    Updated: 2022/09/28 10:43:54 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,8 @@ CFILES		= ft_atoi.c \
 			ft_putnbr_fd.c \
 			ft_itoa.c \
 			ft_strmapi.c \
-			ft_striteri.c
+			ft_striteri.c \
+			ft_split.c
 HDRS		= libft.h
 OBJS		= ${CFILES:.c=.o}
 LIB			= libft.a

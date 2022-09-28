@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:53:56 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/27 21:04:48 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 11:05:15 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[c] = '\0';
 	return (ft_strlen(dst) + ft_strlen(&src[d]));
 }
+
+// int	main(void)
+// {
+// 	char	*dest;
+
+// 	dest = (char *)malloc(sizeof(*dest) * 15);
+// 	printf("%zu", ft_strlcat(dest, "lorem ipsum dolor sit amet", 15));
+// 	printf("%s", dest);
+// }
