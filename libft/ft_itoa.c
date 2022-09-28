@@ -3,15 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 10:47:16 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/27 21:13:42 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 15:31:59 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+	char *ft_itoa(int n);
+
+DESCRIPTION
+    Using malloc(3), generate a string that represent the integer value received 
+	as an argument. Negative numbers have to be managed.
+	
+RETURN VALUES
+    The string that represents the number. NULL if memory allocation fails.
+*/
 static char	spe_putnbr(int nb)
 {
 	unsigned int	number;

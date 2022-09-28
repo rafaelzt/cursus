@@ -6,12 +6,23 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 13:35:35 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/28 12:28:02 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 15:20:03 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+	char **ft_split(char const *s, char c);
+
+DESCRIPTION
+    Allocate (using malloc(3)) an array of strings, resulting from separating
+	string 's' in substrings using the character 'c' as delimiter. The array 
+	must end with a NULL pointer.
+	
+RETURN VALUES
+    An array with the resulting substrings separation. NULL if allocation fails.
+*/
 static int	count_words(const char *str, char c)
 {
 	int	i;

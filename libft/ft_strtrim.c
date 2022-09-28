@@ -6,12 +6,23 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 23:42:32 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/26 11:10:11 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 15:16:45 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+	char *ft_strtrim(char const *s1, char const *set);
+
+DESCRIPTION
+    Remove all characters from the string 'set' from the end of 's1', until find 
+	a character not belonging to 'set'. The resulting string is returned with a 
+	fallback of malloc(3)
+	
+RETURN VALUES
+    New cutted string. NULL if allocation fails.
+*/
 static	size_t	trimornot(char const *set, char c)
 {
 	while (*set)

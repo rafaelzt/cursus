@@ -6,12 +6,18 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 21:57:32 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/26 11:38:00 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 15:21:32 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+	void ft_putnbr_fd(int n, int fd);
+
+DESCRIPTION
+    Send 'n' to the given file descriptor 'fd'.
+*/
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n < 0)

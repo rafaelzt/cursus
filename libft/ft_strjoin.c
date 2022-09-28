@@ -6,12 +6,22 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:53:23 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/26 11:02:18 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 15:13:18 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+	char	*ft_strjoin(char const *s1, char const *s2);
+
+DESCRIPTION
+    Reserve (with malloc(3)) and return a new string, formed by the 
+	concatenation of 's1' and 's2'.
+	
+RETURN VALUES
+    The new string. NULL if memory allocation fails.
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*newstr;
