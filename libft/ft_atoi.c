@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:11:25 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/27 16:07:20 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:30:09 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ int	ft_atoi(const char *str)
 		neg *= -1;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
-	while (str[i] != '\0' && (str[i] <= 57 && str[i] >= 48))
+	while (str[i] != '\0' && (str[i] <= '9' && str[i] >= '0'))
 	{
-		if (num * neg > 2147483647)
+		if (num * neg > INT_MAX)
 			return (-1);
-		else if (num * neg < -2147483648)
+		else if (num * neg < INT_MIN)
 			return (0);
-		num = num * 10 + (str[i] - 48);
+		num = num * 10 + (str[i] - '0');
 		i++;
 	}
 	return ((int)num * neg);

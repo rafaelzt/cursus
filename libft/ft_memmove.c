@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:07:59 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/28 12:05:42 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 12:57:13 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-	if (dst == 0 && src == 0)
+	if (!dst && !src)
 		return (0);
 	if (d < s)
 		while (len--)
@@ -46,3 +46,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+
+// int	main(void)
+// {
+// 	char src[15] = "lorem ipsum";
+// 	char dst[20] = "dolor sit amet";
+// 	size_t len = 3;
+
+// 	printf("src: %s [ %p ]\n", src, &src);
+// 	printf("dst: %s [ %p ]\n", dst, &dst);
+// 	printf("-> dst: %s\n", ft_memmove(src, dst, len));
+// }
