@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 13:35:35 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/09/28 16:24:48 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/09/28 16:50:49 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,14 @@ char	**ft_split(char const *s, char c)
 	int		index;
 	char	**split;
 
-	split = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!split)
-		return (0);
 	i = 0;
 	j = 0;
 	index = -1;
+	if (!s)
+		return (0);
+	split = ft_calloc(sizeof(char *), (count_words(s, c) + 1));
+	if (!split)
+		return (0);
 	while (i <= ft_strlen(s))
 	{
 		if (s[i] != c && index < 0)
@@ -81,7 +83,6 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	split[j] = 0;
 	return (split);
 }
 
