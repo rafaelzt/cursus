@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 21:46:19 by rzamolo-          #+#    #+#              #
-#    Updated: 2022/09/29 16:37:20 by rzamolo-         ###   ########.fr        #
+#    Updated: 2022/09/29 16:51:54 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,8 +34,8 @@ CFILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 ################################################################################
 ##									BONUS									  ##
 ################################################################################
-CBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-    ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+CBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c 
+# ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 OBONUS = $(CBONUS:.c=.o)
 ################################################################################
 
