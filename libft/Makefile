@@ -6,74 +6,95 @@
 #    By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 21:46:19 by rzamolo-          #+#    #+#              #
-#    Updated: 2022/09/29 16:51:54 by rzamolo-         ###   ########.fr        #
+#    Updated: 2022/09/30 19:56:27 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-################################################################################
-HDRS = /.
-OBJS = $(CFILES:.c=.o)
+CFLAGS = -c -Wall -Wextra -Werror
+AR = ar -rcs
 NAME = libft.a
 RM = rm -rf
 ################################################################################
-
-################################################################################
 ##								MANDATORY									  ##
 ################################################################################
-CFILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-    ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c \
-    ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c \
-    ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c \
-    ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
-    ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-    ft_putnbr_fd.c
-################################################################################
+CFILES = \
+		ft_isalpha.c \
+		ft_isdigit.c \
+		ft_isalnum.c \
+		ft_isascii.c \
+		ft_isprint.c \
+		ft_strlen.c \
+		ft_memset.c \
+		ft_bzero.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_strlcpy.c \
+		ft_strlcat.c \
+		ft_toupper.c \
+		ft_tolower.c \
+		ft_strchr.c \
+		ft_strrchr.c \
+		ft_strncmp.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_strnstr.c \
+		ft_atoi.c \
+		ft_calloc.c \
+		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_split.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 
 ################################################################################
 ##									BONUS									  ##
 ################################################################################
-CBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c 
-# ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
-OBONUS = $(CBONUS:.c=.o)
+CBONUS = \
+		ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		# ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+OBJS = $(CFILES:.c=.o)
+BOBJS = $(CBONUS:.c=.o)
 ################################################################################
 
 ################################################################################
-.PHONY: all re fclean clean bonus
+.PHONY: all re fclean clean bonus bclean
 ################################################################################
-all:        $(NAME)
+all:        $(NAME) bonus
 
 $(NAME):    $(OBJS)
-	@ar rc $(NAME) $(OBJS)
-	@ranlib $(NAME)
+			@$(CC) $(CFLAGS) $(CFILES)
+			@$(AR) $(NAME) $(OBJS)
 
-bonus:      $(OBJS) $(OBONUS)
-	@ar rc $(NAME) $(OBJS) $(OBONUS)
-	@ranlib $(NAME)
+bonus:    	${BOBJS} $(OBJS)
+			@$(CC) $(CFLAGS) $(CFILES) $(CBONUS)
+			@$(AR) $(NAME) $(OBJS) ${BOBJS}
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(CFILES) $(CBONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBONUS)
+re:     	fclean all
 
-.c.o:
-	@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I $(HDRS)
-
-re:     fclean all
-
-fclean:     clean
-	@$(RM) $(NAME)
+fclean:     clean bclean
+			@$(RM) $(NAME)
 clean:
-	@$(RM) $(OBJS) $(OBONUS)
+			@$(RM) $(OBJS)
 
+bclean:
+			@$(RM) $(BOBJS)
 
-
-
-
-
-
-
-
-
-
-
+# $<: rule target file (input)
+# $@: rule source file (output)
