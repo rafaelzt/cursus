@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 21:46:19 by rzamolo-          #+#    #+#              #
-#    Updated: 2022/09/30 19:56:27 by rzamolo-         ###   ########.fr        #
+#    Updated: 2022/09/30 20:37:18 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,8 +64,8 @@ CBONUS = \
 		ft_lstsize.c \
 		ft_lstlast.c \
 		ft_lstadd_back.c \
-		# ft_lstdelone.c \
-		ft_lstclear.c \
+		ft_lstdelone.c \
+		# ft_lstclear.c \
 		ft_lstiter.c \
 		ft_lstmap.c
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
@@ -76,21 +76,21 @@ BOBJS = $(CBONUS:.c=.o)
 ################################################################################
 .PHONY: all re fclean clean bonus bclean
 ################################################################################
-all:        $(NAME) bonus
+all:        bonus $(NAME)
 
-$(NAME):    $(OBJS)
-			@$(CC) $(CFLAGS) $(CFILES)
+$(NAME):	$(OBJS)
 			@$(AR) $(NAME) $(OBJS)
 
-bonus:    	${BOBJS} $(OBJS)
-			@$(CC) $(CFLAGS) $(CFILES) $(CBONUS)
-			@$(AR) $(NAME) $(OBJS) ${BOBJS}
+bonus:		$(OBJS) $(BOBJS)
+			@$(AR) $(NAME) $(OBJS) $(BOBJS)
+			
 
 re:     	fclean all
 
-fclean:     clean bclean
+fclean:     clean
 			@$(RM) $(NAME)
-clean:
+
+clean:		bclean
 			@$(RM) $(OBJS)
 
 bclean:
