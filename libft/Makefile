@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 21:46:19 by rzamolo-          #+#    #+#              #
-#    Updated: 2022/09/30 20:37:18 by rzamolo-         ###   ########.fr        #
+#    Updated: 2022/09/30 20:52:57 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,8 +65,8 @@ CBONUS = \
 		ft_lstlast.c \
 		ft_lstadd_back.c \
 		ft_lstdelone.c \
-		# ft_lstclear.c \
-		ft_lstiter.c \
+		ft_lstclear.c \
+#		ft_lstiter.c \
 		ft_lstmap.c
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 OBJS = $(CFILES:.c=.o)
