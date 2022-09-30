@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+         #
+#    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 21:46:19 by rzamolo-          #+#    #+#              #
-#    Updated: 2022/09/30 20:52:57 by rzamolo-         ###   ########.fr        #
+#    Updated: 2022/10/01 00:23:09 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,8 +66,8 @@ CBONUS = \
 		ft_lstadd_back.c \
 		ft_lstdelone.c \
 		ft_lstclear.c \
-#		ft_lstiter.c \
-		ft_lstmap.c
+		ft_lstiter.c 
+#		ft_lstmap.c
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 OBJS = $(CFILES:.c=.o)
 BOBJS = $(CBONUS:.c=.o)
@@ -80,6 +80,9 @@ all:        bonus $(NAME)
 
 $(NAME):	$(OBJS)
 			@$(AR) $(NAME) $(OBJS)
+
+%.o:%.c
+			$(CC) $(CFLAGS) -c $^ -o $@
 
 bonus:		$(OBJS) $(BOBJS)
 			@$(AR) $(NAME) $(OBJS) $(BOBJS)
