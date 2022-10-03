@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
+#    By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 21:46:19 by rzamolo-          #+#    #+#              #
-#    Updated: 2022/10/01 00:23:09 by rzamolo-         ###   ########.fr        #
+#    Updated: 2022/10/03 16:31:15 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,20 +73,22 @@ OBJS = $(CFILES:.c=.o)
 BOBJS = $(CBONUS:.c=.o)
 ################################################################################
 
-################################################################################
-.PHONY: all re fclean clean bonus bclean
-################################################################################
-all:        bonus $(NAME)
+ifdef WITH_BONUS
+	TOTAL_OBJS = $(OBJS) $(BOBJS)
+else
+	TOTAL_OBJS = $(OBJS)
+endif
 
-$(NAME):	$(OBJS)
-			@$(AR) $(NAME) $(OBJS)
+all:        $(NAME)
+
+$(NAME):	$(TOTAL_OBJS)
+			$(AR) $(NAME) $(TOTAL_OBJS)
 
 %.o:%.c
 			$(CC) $(CFLAGS) -c $^ -o $@
 
-bonus:		$(OBJS) $(BOBJS)
-			@$(AR) $(NAME) $(OBJS) $(BOBJS)
-			
+bonus:
+			@make WITH_BONUS=1
 
 re:     	fclean all
 
@@ -99,5 +101,9 @@ clean:		bclean
 bclean:
 			@$(RM) $(BOBJS)
 
-# $<: rule target file (input)
+################################################################################
+.PHONY: all re fclean clean bonus bclean
+################################################################################
+
+# $< $^: rule target file (input)
 # $@: rule source file (output)
