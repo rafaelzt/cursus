@@ -6,25 +6,33 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:59:23 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/10/05 16:06:07 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/10/05 18:27:28 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printf(char const *, ...)
+size_t static	count_flags(char *str)
 {
-	printf("%s", &);
+	int	words;
+
+	words = 0;
+	while (*str != '\0')
+	{
+		if (*str == 37 && (*(str + 1) != 37 || *(str + 1) != '\0'))
+			words++;
+		else if (*str == 37 && *(str + 1) == 37)
+			str++;
+		str++;
+	}
+	return (words);
 }
 
 int	main(void)
 {
-	char	*str;
+	char	str[50] = "ho%la%%";
 
-	str = (char *)malloc(5);
-	str = "hola\0";
-	ft_printf(str);
-
+	printf("%zu", count_flags(str));
 	return (0);
 }
 

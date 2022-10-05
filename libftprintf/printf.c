@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:36:05 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/10/05 17:31:24 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/10/05 17:58:20 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	main(void)
 	printf("u: %u\n", value);
 	printf("x: %x\n", value);
 	printf("X: %X\n", value);
-//	printf("%: %%\n", str);
+	printf("%: %%\n", str);
 	printf("Sum: %d\n", variadic_functions(2, 1, 5, 2)); // number of elements, elements...
 	return (0);
 }
