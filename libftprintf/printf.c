@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:36:05 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/10/03 14:45:24 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/10/05 11:54:33 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,18 @@ int	variadic_functions(int numbers, ...)
 
 int	main(void)
 {
-	char str = 'h';
+	char 	str[50] = "ho\0la\0que\n\tal";
+	int		value = 20;
 
-	printf("c: %c\n", str);
-//	printf("s: %s\n", str);
+//	printf("c: %c\n", str);
+	printf("s: %s\n", str);
 	printf("p: %p\n", &str);
-	printf("d: %d\n", str);
-	printf("i: %i\n", str);
-	printf("u: %u\n", str);
-	printf("x: %x\n", str);
-	printf("X: %X\n", str);
+	printf("d: %d\n", value);
+	printf("i: %i\n", value);
+	printf("u: %u\n", value);
+	printf("x: %x\n", value);
+	printf("X: %X\n", value);
 //	printf("%: %%\n", str);
-	printf("Sum: %d\n", variadic_functions(3, 1, 5, 2)); // number of elements, elements...
+	printf("Sum: %d\n", variadic_functions(2, 1, 5, 2)); // number of elements, elements...
 	return (0);
 }
