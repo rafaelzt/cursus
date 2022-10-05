@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 15:07:47 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/10/05 16:35:13 by rzamolo-         ###   ########.fr       */
+/*   Created: 2022/10/05 14:59:23 by rzamolo-          #+#    #+#             */
+/*   Updated: 2022/10/05 16:06:07 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
 
-#ifndef	LIBFTPRINTF_H
-# define LIBFTPRINTF_H
-
-# include <stdarg.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdio.h>
-
-typedef struct s_word
+int	ft_printf(char const *, ...)
 {
-	void			*content;
-	char			*flags;
-	char			*format;
-	struct s_word	*next;
-}	t_word;
+	printf("%s", &);
+}
 
-int	ft_printf(char const *content, ...);
+int	main(void)
+{
+	char	*str;
 
-#endif
+	str = (char *)malloc(5);
+	str = "hola\0";
+	ft_printf(str);
+
+	return (0);
+}
+
+// https://www.geeksforgeeks.org/variadic-functions-in-c/
+// 
