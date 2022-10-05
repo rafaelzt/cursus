@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:36:05 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/10/05 15:10:29 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/10/05 17:31:24 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,12 @@ int	main(void)
 	printf("Sum: %d\n", variadic_functions(2, 1, 5, 2)); // number of elements, elements...
 	return (0);
 }
+
+/*
+1. Contar a quantidade de % sozinhos (usado no loop while)
+1.1 %% deve ser desconsiderado
+2. Criar os nós contendo o dado bruto (content), os flags, os formatos, e um ponteiro para a proxima cadeia
+3. Imprimir a cadeia e contar o comprimento (return do comprimento)
+4. Formatar a saida de acordo com o formato solicitado
+5. Limpar os nós depois de imprimi-los
+*/
