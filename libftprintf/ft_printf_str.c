@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf_str.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 15:07:47 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/10/19 11:47:33 by rzamolo-         ###   ########.fr       */
+/*   Created: 2022/10/11 15:26:44 by rzamolo-          #+#    #+#             */
+/*   Updated: 2022/10/13 11:22:39 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libftprintf.h"
 
-# include <stdarg.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdio.h>
+int	ft_strlen(char *str)
+{
+	int	counter;
 
-void	ft_printf_char(char c);
-void	ft_printf_str(char *str);
-void	ft_printf_ptr(void);
+	counter = 0;
+	while (*str != '\0')
+	{
+		str++;
+		counter++;
+	}
+	return (counter);
+}
 
-#endif
+void	ft_printf_str(char *str)
+{
+	write(1, str, ft_strlen(str));
+}

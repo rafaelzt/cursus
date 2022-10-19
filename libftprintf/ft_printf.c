@@ -6,35 +6,75 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:59:23 by rzamolo-          #+#    #+#             */
-/*   Updated: 2022/10/05 18:27:28 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2022/10/19 11:51:35 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-size_t static	count_flags(char *str)
+int	ft_printf(const char *format, ...)
 {
-	int	words;
+	int		counter;
+	va_list	ap;
 
-	words = 0;
-	while (*str != '\0')
+	counter = 0;
+	va_start(ap, format);
+	while ((*format))
 	{
-		if (*str == 37 && (*(str + 1) != 37 || *(str + 1) != '\0'))
-			words++;
-		else if (*str == 37 && *(str + 1) == 37)
-			str++;
-		str++;
+		// Print everything
+		if (*format != '%')
+			write(1, format, 1);
+		if (*format == '%')
+		{
+			format++;
+			if ((*format) == 'c')
+				ft_printf_char(va_arg(ap, int));
+			if ((*format) == '%')
+				ft_printf_char('%');
+			if ((*format) == 'c')
+				ft_printf_char(va_arg(ap, int));
+			if ((*format) == 'c')
+				ft_printf_char(va_arg(ap, int));
+		}
+		format++;
+		counter++;
 	}
-	return (words);
+	return (counter);
 }
 
 int	main(void)
 {
-	char	str[50] = "ho%la%%";
+	int				x;
+	float			y;
+	unsigned int	z;
+	char			c;
+	//char			str[50] = "hola";
 
-	printf("%zu", count_flags(str));
+	c = 'A';
+	x = -21;
+	y = 3.6;
+	z = 42;
+	
+	ft_printf("Teste: %c\n");
+	ft_printf("Teste: %c\n", c);
+	ft_printf("Teste: %%\n");
+	
+	
+	// ft_printf("%s\n", str);
+	// ft_printf("ft_printf: %p\n", &str);
+	// // 0x00007ffeefbffd70
+	// printf("printf: %p\n", &str);
+	// printf("printf: %u\n", -10);
+	// 
+	// ft_printf("%d", y);
+	
+	// ft_printf("%i", x);
+	
+	// ft_printf("%u", z);
+
+	// ft_printf("%x", str);
+	
+	// ft_printf("%X", str);
+
 	return (0);
 }
-
-// https://www.geeksforgeeks.org/variadic-functions-in-c/
-// 
